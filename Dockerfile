@@ -1,15 +1,6 @@
-# Multi-stage Dockerfile for SmartgridAI Full-Stack Deployment
+# Production Dockerfile for SmartgridAI Full-Stack Platform
+FROM python:3.11-slim
 
-# --- Stage 1: Build React Frontend ---
-FROM node:20-alpine AS frontend-builder
-WORKDIR /app/frontend
-COPY frontend/package*.json ./
-RUN npm install
-COPY frontend/ ./
-RUN npm run build
-
-# --- Stage 2: Production Python Backend & Static Host ---
-FROM python:3.11-slim AS production
 WORKDIR /app
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -26,15 +17,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source code, data assets, and reports
+# Copy backend source code, models, and data
 COPY backend/ ./backend/
 COPY src/ ./src/
 COPY data/ ./data/
 COPY quality_report.json ./
 COPY exports/ ./exports/
 
-# Copy built frontend assets from Stage 1 into frontend/dist
-COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
+# Copy pre-compiled production frontend bundle
+COPY frontend/dist/ ./frontend/dist/
 
 EXPOSE 8000
 
