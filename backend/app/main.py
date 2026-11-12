@@ -2,7 +2,17 @@
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
+
+# Ensure project root and src are always in sys.path
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+SRC_DIR = PROJECT_ROOT / "src"
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,6 +38,12 @@ app = FastAPI(
     description="Coursework demonstration backend service for grid analytics, machine learning inference, and inspection triage.",
     version="1.0.0",
 )
+
+@app.get("/health", tags=["Health"])
+@app.get("/api/health", tags=["Health"])
+def health_check():
+    """Unauthenticated public health check for Render, Docker, and uptime monitoring."""
+    return {"status": "healthy", "service": "smartgridai-platform", "version": "1.0.0"}
 
 # Cross-Origin Resource Sharing
 app.add_middleware(

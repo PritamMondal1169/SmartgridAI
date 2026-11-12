@@ -13,7 +13,7 @@ services:
       - JWT_SECRET=smartgrid-secret-key-production-2026
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/api/analytics/overview"]
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
