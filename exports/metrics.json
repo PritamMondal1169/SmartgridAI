@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-11-12T10:19:03.581697+00:00",
+  "wall_clock_s": 60.96,
+  "hardware": "Local CPU Environment / Google Colab GPU Target",
+  "m4_forecasting": {
+    "lstm": {
+      "model_name": "m4_lstm_forecaster",
+      "architecture": "GlobalLSTM(hidden=64, layers=2, embed=16)",
+      "config_hash": "7842dd5f608e147a",
+      "dataset_hash": "2e148711f8a1665e",
+      "seed": 42,
+      "mean_mase": 0.7634,
+      "beat_rate": 1.0,
+      "meets_dod": true,
+      "baseline": {
+        "name": "seasonal_naive",
+        "mean_mase": 1.0
+      }
+    },
+    "gru": {
+      "model_name": "m4_gru_forecaster",
+      "architecture": "GlobalGRU(hidden=64, layers=2, embed=16)",
+      "config_hash": "7842dd5f608e147a",
+      "dataset_hash": "2e148711f8a1665e",
+      "seed": 42,
+      "mean_mase": 0.7613,
+      "beat_rate": 1.0,
+      "meets_dod": true,
+      "baseline": {
+        "name": "seasonal_naive",
+        "mean_mase": 1.0
+      }
+    }
+  },
+  "m5_generative_anomaly": {
+    "wgan_gp": {
+      "model_name": "m5_wgan_generator",
+      "architecture": "WGAN-GP(latent=32, hidden=128, lambda=10.0)",
+      "seed": 42,
+      "utility_drop": 0.0315,
+      "meets_dod": true,
+      "baseline": {
+        "name": "random_window",
+        "mmd": 0.0845
+      }
+    },
+    "vae": {
+      "model_name": "m5_vae_anomaly",
+      "architecture": "DemandVAE(latent=16, beta=0.05)",
+      "seed": 42,
+      "p99_threshold": 0.144305,
+      "precision": 0.9636,
+      "recall": 0.5955,
+      "f1": 0.7361,
+      "meets_dod": true,
+      "baseline": {
+        "name": "daily_zscore",
+        "f1": 0.5984
+      }
+    }
+  }
+}

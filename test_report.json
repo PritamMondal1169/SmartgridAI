@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-11-12T10:30:34.534313+00:00",
+  "tier": "4",
+  "duration_seconds": 5.405,
+  "summary": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 0,
+    "errors": 0
+  },
+  "status": "FAIL",
+  "failures": [
+    {
+      "nodeid": "tests/e2e/test_tier4_workloads.py::test_t4_scen_04_automated_retraining_hash_checksum_cycle",
+      "outcome": "failed",
+      "duration": 0.5982569000043441,
+      "longrepr": "tests\\e2e\\test_tier4_workloads.py:262: in test_t4_scen_04_automated_retraining_hash_checksum_cycle\n    assert mean_mase < 1.0, f\"Retrained forecaster mean MASE ({mean_mase:.4f}) must beat Seasonal-Naive floor (1.0)\"\nE   AssertionError: Retrained forecaster mean MASE (2.8546) must beat Seasonal-Naive floor (1.0)\nE   assert 2.85455089960885 < 1.0"
+    }
+  ]
+}

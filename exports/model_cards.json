@@ -1,0 +1,62 @@
+[
+  {
+    "model_name": "m4_lstm_forecaster",
+    "module": "M4",
+    "version": "1.0.0",
+    "architecture": "GlobalLSTM(in_features=6, embed_dim=16, hidden_dim=64, layers=2, horizon=96)",
+    "weights_path": "exports/m4_lstm.pt",
+    "metrics": {
+      "mase": 0.7634,
+      "portfolio_beat_rate": 1.0
+    },
+    "baseline": {
+      "name": "seasonal_naive",
+      "mase": 1.0
+    }
+  },
+  {
+    "model_name": "m4_gru_forecaster",
+    "module": "M4",
+    "version": "1.0.0",
+    "architecture": "GlobalGRU(in_features=6, embed_dim=16, hidden_dim=64, layers=2, horizon=96)",
+    "weights_path": "exports/m4_gru.pt",
+    "metrics": {
+      "mase": 0.7613,
+      "portfolio_beat_rate": 1.0
+    },
+    "baseline": {
+      "name": "seasonal_naive",
+      "mase": 1.0
+    }
+  },
+  {
+    "model_name": "m5_wgan_generator",
+    "module": "M5",
+    "version": "1.0.0",
+    "architecture": "WGAN-GP(latent_dim=32, hidden_dim=128, output_dim=96)",
+    "weights_path": "exports/m5_wgan_generator.pt",
+    "metrics": {
+      "downstream_utility_drop": 0.0315
+    },
+    "baseline": {
+      "name": "random_window"
+    }
+  },
+  {
+    "model_name": "m5_vae_anomaly",
+    "module": "M5",
+    "version": "1.0.0",
+    "architecture": "DemandVAE(input_dim=96, latent_dim=16, beta=0.05)",
+    "weights_path": "exports/m5_vae.pt",
+    "metrics": {
+      "p99_threshold": 0.144305,
+      "f1": 0.7361,
+      "precision": 0.9636,
+      "recall": 0.5955
+    },
+    "baseline": {
+      "name": "daily_zscore",
+      "f1": 0.5984
+    }
+  }
+]

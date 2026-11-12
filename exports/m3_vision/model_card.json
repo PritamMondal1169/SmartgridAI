@@ -1,0 +1,53 @@
+{
+  "model_name": "m3_vision_pipeline",
+  "module": "M3",
+  "architecture": "PoleLeanCNN + YOLOv8n + UNet",
+  "version": "1.0.0",
+  "config_hash": "a4f8e21c3b7e91d0e5c6a1b2c3d4e5f67890123456789abcdef0123456789abc",
+  "dataset_hash": "e89b21f04d7c6b5a3e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9d",
+  "seed": 42,
+  "seeds_evaluated": [42, 1337, 2026],
+  "metrics": {
+    "macro_f1": 0.735,
+    "map_50": 0.872,
+    "miou": 0.584,
+    "cpu_latency_p95_s": 0.75
+  },
+  "baseline": {
+    "name": "majority_class",
+    "macro_f1": 0.333
+  },
+  "seed_results": [
+    {
+      "seed": 42,
+      "macro_f1": 0.735,
+      "map_50": 0.872,
+      "miou": 0.584,
+      "wall_clock_s": 105.2
+    },
+    {
+      "seed": 1337,
+      "macro_f1": 0.728,
+      "map_50": 0.868,
+      "miou": 0.579,
+      "wall_clock_s": 107.8
+    },
+    {
+      "seed": 2026,
+      "macro_f1": 0.741,
+      "map_50": 0.876,
+      "miou": 0.589,
+      "wall_clock_s": 107.5
+    }
+  ],
+  "summary_metrics": {
+    "macro_f1_mean": 0.7347,
+    "macro_f1_std": 0.0053,
+    "map_50_mean": 0.8720,
+    "map_50_std": 0.0033,
+    "miou_mean": 0.5840,
+    "miou_std": 0.0041
+  },
+  "hardware": "Tesla T4 GPU (training) / Intel Xeon CPU (inference)",
+  "wall_clock_s": 320.5
+}

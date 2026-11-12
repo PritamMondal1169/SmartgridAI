@@ -1,0 +1,39 @@
+{
+  "module": "M2",
+  "model_name": "m2_dnn_benchmark",
+  "architecture": "Dense(128, 64, 32, 16, 1)",
+  "input_dim": 12,
+  "hidden_dims": [
+    128,
+    64,
+    32,
+    16
+  ],
+  "output_dim": 1,
+  "activation": "relu",
+  "optimizers": [
+    "Adam",
+    "SGD",
+    "RMSprop"
+  ],
+  "initializers": [
+    "Random",
+    "Xavier",
+    "He"
+  ],
+  "regularizers": [
+    "None",
+    "Dropout",
+    "BatchNorm"
+  ],
+  "seeds": [
+    42,
+    101,
+    777
+  ],
+  "epochs": 25,
+  "batch_size": 64,
+  "clip_norm": 1.0,
+  "config_hash": "ef8550e82051a9e99294b2687683db6c6d094a4a8142c0eda664e04efd7ba396",
+  "dataset_hash": "fbd4835d1eef28a7620606bc667942e1e9a81a1f586b5b62430a526d6b0c0682"
+}

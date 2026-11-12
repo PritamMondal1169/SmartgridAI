@@ -1,0 +1,22 @@
+{
+  "model_name": "m1_demand_mlp",
+  "module": "M1",
+  "architecture": "MLP(64, 32, 1)",
+  "config_hash": "e21cbb82e709c9c8cafed0f3879aa9d525ebf1ab63ade2db983a4f95d9931c5a",
+  "dataset_hash": "fbd4835d1eef28a7620606bc667942e1e9a81a1f586b5b62430a526d6b0c0682",
+  "seed": 42,
+  "metrics": {
+    "mae": 0.0347,
+    "rmse": 0.0483,
+    "r2": 0.9774
+  },
+  "baseline": {
+    "name": "ridge_regression",
+    "mae": 0.0353,
+    "rmse": 0.0501,
+    "r2": 0.9757
+  },
+  "hardware": "Tesla T4 GPU (CPU fallback verified)",
+  "wall_clock_s": 0.95,
+  "timestamp": "2026-11-12T10:22:06.744683+00:00"
+}

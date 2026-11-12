@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-11T22:18:52.943430+00:00",
+    "pipeline_version": "1.0.0",
+    "target_admission_rate_range": [
+      0.6,
+      0.7
+    ]
+  },
+  "summary": {
+    "total_meters_evaluated": 84,
+    "admitted_meters_count": 55,
+    "rejected_meters_count": 29,
+    "admission_rate": 0.655
+  },
+  "gate_definitions": {
+    "gate_1_continuous_span": ">= 30 days continuous span",
+    "gate_2_bin_coverage": ">= 70% of 15-min bins populated",
+    "gate_3_outage_fraction": "<= 40% outage fraction",
+    "gate_4_deduplication": "0 duplicate timestamps",
+    "gate_5_non_negativity": "0 negative or impossible values"
+  },
+  "admitted_meters": [
+    "BR04",
+    "BR06",
+    "BR07",
+    "BR08",
+    "BR09",
+    "BR11",
+    "BR12",
+    "BR13",
+    "BR14",
+    "BR15",
+    "BR16",
+    "BR18",
+    "BR19",
+    "BR22",
+    "BR23",
+    "BR24",
+    "BR26",
+    "BR27",
+    "BR28",
+    "BR29",
+    "BR30",
+    "BR31",
+    "BR32",
+    "BR33",
+    "BR34",
+    "BR35",
+    "BR36",
+    "BR37",
+    "BR38",
+    "BR39",
+    "BR43",
+    "BR45",
+    "BR46",
+    "BR48",
+    "BR49",
+    "BR50",
+    "BR51",
+    "MH02",
+    "MH03",
+    "MH09",
+    "MH10",
+    "MH11",
+    "MH14",
+    "MH15",
+    "MH21",
+    "MH23",
+    "MH25",
+    "MH36",
+    "MH37",
+    "MH41",
+    "MH42",
+    "MH43",
+    "MH45",
+    "MH46",
+    "MH47"
+  ],
+  "rejected_meters": [
+    "BR02",
+    "BR03",
+    "BR05",
+    "BR10",
+    "BR17",
+    "BR20",
+    "BR42",
+    "BR44",
+    "BR52",
+    "MH01",
+    "MH06",
+    "MH07",
+    "MH08",
+    "MH12",
+    "MH17",
+    "MH18",
+    "MH20",
+    "MH22",
+    "MH24",
+    "MH26",
+    "MH27",
+    "MH28",
+    "MH30",
+    "MH31",
+    "MH33",
+    "MH34",
+    "MH35",
+    "MH38",
+    "MH39"
+  ],
+  "failing_meters": {
+    "BR02": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 607.0,
+        "bin_coverage": 0.6672,
+        "outage_fraction": 0.052,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR03": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 437.0,
+        "bin_coverage": 0.5927,
+        "outage_fraction": 0.1183,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR05": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 757.0,
+        "bin_coverage": 0.6302,
+        "outage_fraction": 0.0418,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR10": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 484.0,
+        "bin_coverage": 0.6674,
+        "outage_fraction": 0.0606,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR17": {
+      "failing_gates": [
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 405.0,
+        "bin_coverage": 0.9017,
+        "outage_fraction": 0.8773,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR20": {
+      "failing_gates": [
+        "insufficient_coverage",
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 187.0,
+        "bin_coverage": 0.6631,
+        "outage_fraction": 0.6451,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR42": {
+      "failing_gates": [
+        "insufficient_coverage",
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 512.0,
+        "bin_coverage": 0.4746,
+        "outage_fraction": 0.9743,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR44": {
+      "failing_gates": [
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 782.0,
+        "bin_coverage": 0.9476,
+        "outage_fraction": 0.6928,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "BR52": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 665.0,
+        "bin_coverage": 0.5579,
+        "outage_fraction": 0.0555,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH01": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 659.0,
+        "bin_coverage": 0.6039,
+        "outage_fraction": 0.0901,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH06": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 660.0,
+        "bin_coverage": 0.6483,
+        "outage_fraction": 0.1021,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH07": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 660.0,
+        "bin_coverage": 0.6303,
+        "outage_fraction": 0.1185,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH08": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 660.0,
+        "bin_coverage": 0.5924,
+        "outage_fraction": 0.1184,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH12": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 660.0,
+        "bin_coverage": 0.6151,
+        "outage_fraction": 0.1316,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH17": {
+      "failing_gates": [
+        "insufficient_coverage",
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 660.0,
+        "bin_coverage": 0.6347,
+        "outage_fraction": 0.4264,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH18": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 662.0,
+        "bin_coverage": 0.639,
+        "outage_fraction": 0.0956,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH20": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 659.0,
+        "bin_coverage": 0.5654,
+        "outage_fraction": 0.182,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH22": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 659.0,
+        "bin_coverage": 0.5011,
+        "outage_fraction": 0.0863,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH24": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 653.0,
+        "bin_coverage": 0.4781,
+        "outage_fraction": 0.0972,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH26": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 650.01,
+        "bin_coverage": 0.4862,
+        "outage_fraction": 0.181,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH27": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 649.0,
+        "bin_coverage": 0.5972,
+        "outage_fraction": 0.1741,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH28": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 650.0,
+        "bin_coverage": 0.5816,
+        "outage_fraction": 0.1074,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH30": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 650.0,
+        "bin_coverage": 0.6539,
+        "outage_fraction": 0.1982,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH31": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 649.0,
+        "bin_coverage": 0.5408,
+        "outage_fraction": 0.1532,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH33": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 647.0,
+        "bin_coverage": 0.513,
+        "outage_fraction": 0.1273,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH34": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 648.0,
+        "bin_coverage": 0.3961,
+        "outage_fraction": 0.2169,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH35": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 645.0,
+        "bin_coverage": 0.5953,
+        "outage_fraction": 0.1721,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH38": {
+      "failing_gates": [
+        "insufficient_coverage",
+        "outage_fraction_exceeded"
+      ],
+      "metrics": {
+        "span_days": 426.0,
+        "bin_coverage": 0.4536,
+        "outage_fraction": 0.4412,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    },
+    "MH39": {
+      "failing_gates": [
+        "insufficient_coverage"
+      ],
+      "metrics": {
+        "span_days": 647.0,
+        "bin_coverage": 0.3541,
+        "outage_fraction": 0.2166,
+        "duplicate_count": 0,
+        "negative_count": 0
+      }
+    }
+  },
+  "total_meters_evaluated": 84,
+  "admitted_meters_count": 55,
+  "rejected_meters_count": 29,
+  "admission_rate": 0.655
+}

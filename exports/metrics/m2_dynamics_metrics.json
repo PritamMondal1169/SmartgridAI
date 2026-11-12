@@ -1,0 +1,85 @@
+{
+  "module": "M2",
+  "architecture": "Dense(128, 64, 32, 16, 1)",
+  "config_hash": "ef8550e82051a9e99294b2687683db6c6d094a4a8142c0eda664e04efd7ba396",
+  "dataset_hash": "fbd4835d1eef28a7620606bc667942e1e9a81a1f586b5b62430a526d6b0c0682",
+  "optimizer_sweep": {
+    "Adam": {
+      "mae_mean": 0.0338,
+      "mae_std": 0.0014,
+      "rmse_mean": 0.0468,
+      "rmse_std": 0.001
+    },
+    "SGD": {
+      "mae_mean": 0.0376,
+      "mae_std": 0.0014,
+      "rmse_mean": 0.0518,
+      "rmse_std": 0.0014
+    },
+    "RMSprop": {
+      "mae_mean": 0.0356,
+      "mae_std": 0.0035,
+      "rmse_mean": 0.0509,
+      "rmse_std": 0.0046
+    }
+  },
+  "initializer_sweep": {
+    "Random": {
+      "initial_loss": 0.1432,
+      "initial_gradient_norms": [
+        0.00292,
+        0.00308,
+        0.00356,
+        0.00389,
+        0.00275
+      ],
+      "final_mae": 0.0306,
+      "final_rmse": 0.0443
+    },
+    "Xavier": {
+      "initial_loss": 0.1988,
+      "initial_gradient_norms": [
+        0.57434,
+        0.7227,
+        0.63978,
+        0.50891,
+        0.2189
+      ],
+      "final_mae": 0.0327,
+      "final_rmse": 0.0459
+    },
+    "He": {
+      "initial_loss": 0.8917,
+      "initial_gradient_norms": [
+        2.43118,
+        8.37668,
+        8.13754,
+        6.70285,
+        3.50487
+      ],
+      "final_mae": 0.0458,
+      "final_rmse": 0.0642
+    }
+  },
+  "regularizer_sweep": {
+    "None": {
+      "train_mae": 0.0401,
+      "val_mae": 0.0458,
+      "generalization_gap": 0.0058
+    },
+    "Dropout": {
+      "train_mae": 0.1304,
+      "val_mae": 0.1271,
+      "generalization_gap": -0.0033
+    },
+    "BatchNorm": {
+      "train_mae": 0.0788,
+      "val_mae": 0.0834,
+      "generalization_gap": 0.0046
+    }
+  },
+  "vanishing_gradient_decay_ratio": 278.29,
+  "exploding_gradient_clipped_stability": true,
+  "hardware": "Tesla T4 GPU (CPU fallback verified)",
+  "timestamp": "2026-11-12T10:22:16.466675+00:00"
+}

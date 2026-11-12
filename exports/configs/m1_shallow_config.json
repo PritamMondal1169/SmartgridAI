@@ -1,0 +1,23 @@
+{
+  "module": "M1",
+  "model_name": "m1_demand_mlp",
+  "architecture": "MLP(64, 32, 1)",
+  "input_dim": 12,
+  "hidden_dims": [
+    64,
+    32
+  ],
+  "output_dim": 1,
+  "activation": "relu",
+  "learning_rate": 0.001,
+  "weight_decay": 0.001,
+  "epochs": 60,
+  "batch_size": 32,
+  "seed": 42,
+  "baseline": {
+    "name": "ridge_regression",
+    "alpha": 1.0
+  },
+  "config_hash": "e21cbb82e709c9c8cafed0f3879aa9d525ebf1ab63ade2db983a4f95d9931c5a",
+  "dataset_hash": "fbd4835d1eef28a7620606bc667942e1e9a81a1f586b5b62430a526d6b0c0682"
+}

@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Caches
+.pytest_cache/
+.coverage
+htmlcov/
+quality_report_temp/
+
+# Large Datasets & Archives (> 100 MB)
+*.zip
+*.tar.gz
+archive*/
+dataverse_files*/
+Electricity Demand, Solar and Wind Generation Data*/
+data/pd-defect/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.npm
+frontend/.vite
+
+# Nested repositories
+ponytail/
+stitch-skills/
+
+# Environment variables & secrets
+.env
+.env.local
+*.pem
+*.key
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

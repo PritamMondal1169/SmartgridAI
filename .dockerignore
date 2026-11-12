@@ -1,0 +1,11 @@
+.venv
+__pycache__
+*.pyc
+*.pyo
+.git
+.pytest_cache
+frontend/node_modules
+archive*.zip
+*.zip
+dataverse_files*
+

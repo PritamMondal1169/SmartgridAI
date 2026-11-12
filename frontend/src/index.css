@@ -1,0 +1,10 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional custom dark mode background */
+html.dark {
+  background-color: #111827; /* gray-900 */
+}
+
